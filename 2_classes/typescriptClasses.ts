@@ -131,3 +131,4 @@ class OnlyOne {
 let right = OnlyOne.getInstance();
 console.log(right.name);
 // right.name = "Something else"; // cannot assign because name is readonly
+

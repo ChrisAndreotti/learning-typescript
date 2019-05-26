@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Learning TypeScript Classes</title>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.ajax({
+                    url : "typescriptClasses.ts",
+                    dataType: "text",
+                    success : function (data) {
+                        $("#code").html(data);
+                    }
+                });
+            }); 
+        </script>
+        <script src="./typescriptClasses.js"></script>
+    </head>
+    <body>
+        <a href="/index.html">&lt; Back home</a>
+        <h2>TypeScript Classes</h2>
+        <p>Open the developer tools console to see output for the scripts below.</p>
+        <pre id="code" class="prettyprint lang-js linenums"></pre>
+    </body>
+</html>

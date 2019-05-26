@@ -5,6 +5,7 @@ This project is a sandbox containing TypeScript code examples, including:
 * TypeScript compiler configuration (see tsconfig.json) 
 * Using TypeScript with ES6 (Arrow functions, Spread & Rest operators, Tuples, Destructuring, Template Literals)
 * TypeScript Classes, Inheritance, Getters & Setters, Static properties, Abstract classes, Singletons, and readonly properties
+* Namespaces vs. loading Modules with TypeScript
 
 All content and instructions came from the excellent [Understanding TypeScript course](https://www.udemy.com/understanding-typescript) on Udemy.
 

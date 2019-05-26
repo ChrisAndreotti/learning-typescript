@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Learning TypeScript Modules using SystemJS</title>
+        <script src="/node_modules/systemjs/dist/system.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.ajax({
+                    url : "./math/circle.ts",
+                    dataType: "text",
+                    success : function (data) {
+                        $("#circle").html(data);
+                    }
+                });
+                $.ajax({
+                    url : "./math/rectangle.ts",
+                    dataType: "text",
+                    success : function (data) {
+                        $("#rectangle").html(data);
+                    }
+                });
+                $.ajax({
+                    url : "./typescriptModules.ts",
+                    dataType: "text",
+                    success : function (data) {
+                        $("#modules").html(data);
+                    }
+                });
+            }); 
+        </script>
+    </head>
+    <body>
+        <script>
+            // set our baseURL reference path
+            SystemJS.config({
+                baseURL: '/4_modules/',
+                packages: {
+                    '/': {
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+
+            // loads /4_modules/typescriptModules.ts
+            SystemJS.import('typescriptModules.js');
+        </script>
+        
+        <a href="/index.html">&lt; Back home</a>
+        <h2>TypeScript Modules</h2>
+        <p>Open the developer tools console to see output for the scripts below.</p>
+        
+        <b>Circle.ts</b>
+        <pre id="circle" class="prettyprint lang-js linenums" style="margin: 5px 0px 20px 0px;"></pre>
+
+        <b>Rectangle.ts</b>
+        <pre id="rectangle" class="prettyprint lang-js linenums" style="margin: 5px 0px 20px 0px;"></pre>
+
+        Both of the above scripts are loaded below via the imports: 
+        <pre id="modules" class="prettyprint lang-js linenums" style="margin: 5px 0px 20px 0px;"></pre>
+    </body>
+</html>
