@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Learning TypeScript Basics</title>
+        <title>Learning TypeScript Interfaces</title>
         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
         <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/google/code-prettify/master/styles/sons-of-obsidian.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             $(document).ready(function() {
                 $.ajax({
-                    url: "typescriptBasics.ts",
+                    url: "typescriptInterfaces.ts",
                     dataType: "text",
-                    success : function (data) {
+                    success: function (data) {
                         $("#code")
                             .html(prettyPrintOne(data, 'js'))
                             .addClass('prettyprint lang-js prettyprinted');
@@ -20,12 +20,14 @@
                 });
             }); 
         </script>
-        <script src="./typescriptBasics.js"></script>
+        <script src="./typescriptInterfaces.js"></script>
     </head>
     <body>
         <a href="/index.html">&lt; Back home</a>
-        <h2>TypeScript Basics</h2>
+        <h2>TypeScript Interfaces</h2>
         <p>Open the developer tools console to see output for the scripts below.</p>
         <pre id="code" class="prettyprint lang-js linenums"></pre>
+
+
     </body>
 </html>
