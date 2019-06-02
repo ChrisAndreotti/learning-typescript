@@ -4,9 +4,28 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Exercise 3</title>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/google/code-prettify/master/styles/sons-of-obsidian.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.ajax({
+                    url: "exercise3.ts",
+                    dataType: "text",
+                    success : function (data) {
+                        $("#code")
+                            .html(prettyPrintOne(data, 'js'))
+                            .addClass('prettyprint lang-js prettyprinted');
+                    }
+                });
+            }); 
+        </script>
         <script src="./exercise3.js"></script>
     </head>
     <body>
-        
+        <a href="/index.html">&lt; Back home</a>
+        <h2>Exercise 3: TypeScript classes</h2>
+        <p>Open the developer tools console to see output for the scripts below.</p>
+        <pre id="code" class="prettyprint lang-js linenums"></pre>
     </body>
 </html>

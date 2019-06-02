@@ -133,9 +133,9 @@ namespace Exercise3 {
     }
 
     const thePerson = new Person1();
-    console.log(thePerson.firstName); //prints empty string again
-    thePerson.firstName = "Joe";
     console.log(thePerson.firstName); //prints empty string
+    thePerson.firstName = "Joe"; // less than 4 characters
+    console.log(thePerson.firstName); //prints empty string again
     thePerson.firstName = "Joseph";
     console.log(thePerson.firstName);
 
