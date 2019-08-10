@@ -8,6 +8,7 @@ This project is a sandbox containing TypeScript code examples, including:
 * Namespaces vs. loading Modules with TypeScript
 * Interfaces in TypeScript, and how to implement and extend them. Also, how to create optional properties and dynamic property names
 * Generics in TypeScript
+* Using Decorators in TypeScript to attach functions to classes, methods, properties, and method parameters
 
 All content and instructions came from the excellent [Understanding TypeScript course](https://www.udemy.com/understanding-typescript) on Udemy.
 
@@ -21,3 +22,5 @@ Compile the .tsc files to ES5 by executing:
 Run the web server by executing:
 
 `npm start`
+
+Visit `http://localhost:3000` to view the code examples.
